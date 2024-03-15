@@ -7,7 +7,7 @@ const _=require("lodash");
 app.set('view engine','ejs');
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 app.get("/",function(req,res)
 {
@@ -21,8 +21,30 @@ app.get("/about",function(req,res)
 
 app.get("/why",function(req,res)
 {
-    res.render("why")
+    res.render("why");
 });
+
+app.get("/sendEmail",function(req,res)
+{
+    res.render("sendEmail");
+})
+
+app.get("/signup",function(req,res)
+{
+    res.render("signup");
+});
+
+app.get("/faq",function(req,res)
+{
+    res.render("faq");
+});
+
+app.get("/vision",function(req,res)
+{
+    res.render("vision");
+});
+
+app.post("")
 
 app.listen(3000,function()
 {
