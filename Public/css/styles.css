@@ -1,0 +1,422 @@
+/* Logo  and title*/
+
+.logo{
+    padding: 0px 0px 0px 0px ;
+    margin:0;
+}
+.logo-title
+{
+    font-family: "Alex Brush";
+    font-size: larger;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    line-height: 15px;
+}
+.navbar-brand{
+    padding-top: 5px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin-right: 26%;
+}
+.navbar-default .navbar-brand {
+    color: #000;
+}
+.nav-item{
+  margin-left: 7px;
+  color: #918a8a;
+}
+@media(max-width:1028px)
+{
+    .navbar-brand
+    {
+        padding-top: 5px;
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        margin-right: 16px;
+    }
+
+}
+
+/* footer */
+
+.footer
+{
+    background-color: #e9e9e9;
+    padding:0%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.footer-head
+{
+    font-style: "roboto";
+    padding-bottom: 25%;
+    color: #918a8a;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+.footer-head:hover
+{
+    color: #000;
+}
+.footer-para
+{
+    padding: 2%;
+    color: #918a8a;
+    font-weight: 300;
+    margin-bottom: 0%;
+}
+.icon-social
+{
+    padding:7% 0.5% 1%;
+}
+
+/* navbar */
+
+.navbar{
+    margin-bottom: 0;
+    padding: 0%;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* header section */
+
+.header img
+{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+} 
+.header
+{
+    margin: 0%;
+    padding: 3% 10%;
+    background-image: url("/images/bg.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heading-box{
+   
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+   
+}
+
+.header-title-1
+{
+    text-shadow: 4px 4px black;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-family: "poppins";
+    font-weight: 900;
+    font-size:80px;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 72px;
+    text-align: left;
+
+}
+.header-title-2
+{
+    text-shadow: 3px 3px black;
+    padding-top: 0%;
+    padding-bottom: 45%;
+    font-family: "roboto";
+    font-weight: 700;
+    font-size:50px;
+    padding-left: 5%;
+    padding-right: 10%;
+    line-height: 65px;
+}
+.header-para
+{
+    padding-top:40%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+
+}
+.para-title
+{
+    font-family: "alex brush";
+    font-size: 40px;
+}
+
+/* objective section */
+
+#features
+{
+    padding: 7.5% 7.5% 7.5% 7.5%;
+    text-align: center;background-color: white;  
+}
+
+.icons
+{
+    margin-top: 2rem;
+    margin-bottom: rem;
+    color: #015f56;
+}
+.feature1
+{
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.icon-heading
+{
+    font-family: "poppins";
+    padding: 5%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.icon-para
+{
+    font-family: "roboto";
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: rgb(137, 128, 128);
+}
+/* cards */
+.individual{
+    max-width: 50%
+}
+.business{
+    max-width: 50%;
+}
+#plans{
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    background-image: url("/images/bg-5.jpg");
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.business-plans{
+    margin-left: 7.5%;
+}
+.card-header
+{
+    padding: 0;
+}
+.card-image
+{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.card-title
+{
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+}
+.card-body
+{
+    font-family: "roboto";
+    letter-spacing: 0.2px;
+}
+.plans-title
+{
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px rgb(53, 51, 51);
+}
+/* carousel */
+
+#testimonials{
+    
+    text-align: center;
+    background-color: #ffffff;
+
+    
+}
+.testimonial-image{
+    width:30%;
+    border-radius:100% ; 
+    margin: 20px;
+    margin-right: 5%;
+    float: left;
+    color:#000
+
+}
+
+.testimonial-text{
+    font-family: "roboto";
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 5rem;
+    color:#000
+
+}
+.carousel-item{
+       padding-bottom: 7%;
+       padding-left:15%;
+       padding-right:15%;
+       padding-top: 7%;
+}
+.testimonial-heading
+{
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 65px;
+    color:#000;
+    text-shadow: 2px 2px rgb(135, 126, 126);
+}
+/* press */
+#press
+{
+    background-color:  #fff;
+    text-align: center;
+    padding-bottom: 3%;
+    
+}
+.press-img
+{
+    width: 15%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+/* newsletter */
+.newsletter-heading{
+    width: 50%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left:10%;
+}
+#newsletter{
+    background-color: #4CCD99;
+    height: auto;
+    background-image: url("/images/bg-2.png");
+}
+.input{
+    margin-right: 10%;
+    background-color: #ffffff;
+    border-radius: 5%;
+    padding: 2%;
+}
+.newsletter-content{
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+.news-heading{
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 2px 2px black;
+    padding-bottom: 15%;
+}
+.news-sub
+{
+    font-family: "roboto";
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff;
+}
+@media (width<=1028px) {
+    
+    .testimonial-image{
+        width: 50%;
+        float: none;
+    
+    }
+    .header-title-1
+{
+    text-shadow: 4px 4px black;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-family: "poppins";
+    font-weight: 900;
+    font-size:50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 72px;
+    text-align: center;
+
+}
+.header-para
+{
+    padding-top:0;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+
+}
+}
+/* email */
+#email
+{
+    padding:5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.email-title
+{
+    text-align: center;
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 45px;
+}
+.lower
+{
+    font-family: "roboto";
+    font-weight:400;
+    font-size: 20px;
+}
+#email-bt
+{
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #258c66;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+#email-bt:hover{
+    background-color: #e2dbdb;
+}
+/* contact */
+.contact-text{
+    float: right;
+}
+.contact-card{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+.fa-linkedin{
+    color:  #0A66C2;
+}
+.fa-linkedin:hover{
+    color: blue;
+}
+.left{
+    padding-right: 9%;
+}
