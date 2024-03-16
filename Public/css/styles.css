@@ -554,8 +554,9 @@
 /* results */
 .result-bg
 {
-    background-image: url(/images/bg-7.jpg);
+    background-image: url(/images/bg-2.png);
     color: #fff;
+    background-size: cover;
 }
 .result-bg-1
 {
@@ -713,6 +714,110 @@
     padding: 5%;
 }
 /* about */
+.header-about{
+    margin: 0%;
+    padding: 3% 10%;
+    background-image: url("/images/aboutbg.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutheader-title-1{
+    text-shadow: 4px 4px black;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-family: "poppins";
+    font-weight: 900;
+    font-size:100px;
+    padding-left: 9.5%;
+    padding-right: 10%;
+    line-height: 72px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.aboutheader-tile-2{
+    text-align: left;
+    text-shadow: 3px 3px black;
+    padding-top: 0%;
+    padding-bottom: 45%;
+    font-family: "roboto";
+    font-weight: 700;
+    font-size:50px;
+    padding-left: 8%;
+    padding-right: 10%;
+    line-height: 65px;
+    letter-spacing: 0.5px;
+}
+.aboutheader-para{
+    padding-top:25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+.aboutus-heading{
+    padding-top: 5%;
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
+ }
+ .aboutuscard1{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+ .aboutuscard2{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+ .aboutuscard3{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+/* why */
+/* about */
+/* Header section styles */
+.header-about {
+    padding: 5% 10%;
+    background-image: url("/images/whybg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutheader-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.aboutheader-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.aboutheader-para {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+/* Section title styles */
+.section-title {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* about */
 /* Header section styles */
 .header-about {
     padding: 5% 10%;
@@ -801,37 +906,6 @@
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
 }
-
-/* Offset section styles */
-.offset-heading {
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem; /* Adjust the font size as needed */
-    letter-spacing: 1px;
-}
-
-.card {
-    border: none; /* Remove border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
-
-.card-img-top {
-    border-radius: 0.5rem; /* Rounded corners */
-}
-
-.card-title {
-    font-size: 1.8rem; /* Adjust the font size as needed */
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.card-text {
-    font-size: 1.4rem; /* Adjust the font size as needed */
-    line-height: 1.5;
-}
-
 /* suggestion */
 .suggestions-image{
     width:40%;
@@ -850,10 +924,35 @@
     padding-top: 3%;
     
 }
-/* faq */
-/* Add this CSS to your existing styles.css or create a new CSS file and link it to your page */
 
-/* Style for the FAQ heading */
+/* result-industries */
+.aa{
+    font-family: 'roboto';
+    font-weight: 300;
+    font-size: 15px;
+
+}
+/* industry-calculator */
+.industry-calc{
+    width: 40%;
+    margin: auto;
+    background-color:rgba(255,255,255,0.5);
+   
+    padding: 5%;
+    padding-top: 3%;
+    border-radius: 2%;
+    
+}
+.industry{
+    background-image: url("/images/bg-5.jpg");
+    padding:5%;
+    
+}
+.sector{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+/* faq */
 .faq-heading {
     text-align: center;
     margin-top: 50px;
@@ -893,5 +992,3 @@
 .card:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
-
-

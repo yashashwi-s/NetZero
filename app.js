@@ -4,6 +4,8 @@ const ejs = require("ejs");
 const app = express();
 const bcrypt = require("bcrypt");
 const _ = require("lodash");
+require("dotenv").config();
+const stripe=require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 const path = require('path');
 const passport = require('passport');
 const session = require('express-session');
@@ -12,6 +14,7 @@ const MongoStore = require('connect-mongo');
 const router = express.Router();
 
 var t = 0;
+app.use(express.json());
 
 mongoose.connect('mongodb+srv://Yashashwi:yashashwi@cluster0.qo8vdvd.mongodb.net/profileDB');
 
@@ -56,6 +59,23 @@ db.once('open', function() {
 });
 
 module.exports = db;
+
+
+const storeItems = new Map([
+    [1,{price:1875,name:"Flight Offsets"}],
+    [2,{price:10000,name:"Food and Drink Offsets"}],
+    [3,{price:12500,name:"Home Energy Offsets"}],
+    [4,{price:7500,name:"Vehicle Offsets"}],
+    [5,{price:15000,name:"Total House Footprint"}],
+    [6,{price:1875,name:"Individual"}],
+    [7,{price:2500,name:"Couple"}],
+    [8,{price:3750,name:"Small Family"}],
+    [9,{price:6250,name:"Big Family"}],
+    
+])
+
+
+
 
 const calculateDataSchema = new mongoose.Schema({
     id: String,
@@ -123,10 +143,7 @@ app.post("/",function(req,res){
     res.render("home");
 })
 
-app.get("/industries",function(req,res)
-{
-    res.render("industries")
-})
+
 
 
 app.post("/signup", async function (req, res) {
@@ -211,8 +228,128 @@ app.get("/why",function(req,res)
 app.get("/sendEmail",function(req,res)
 {
     res.render("sendEmail");
-})
+});
 
+app.get("/industry-calculator",function(req,res)
+{
+    res.render("industry-calculator");
+});
+app.post("/industry-calculator",function(req,res){
+    console.log(req.body);
+    var companyName= req.body.companyName;
+    var employees= req.body.employ;
+    var sector = req.body.sector;
+    var footprintI;
+
+    if(sector==='1' && employees>50000)
+    {
+      footprintI=12 *Math.pow(10,6);
+    }
+    else if(sector==='1'&& employees>=1000 && employees<=50000)
+    {
+        footprintI= 0.8 *Math.pow(10,6);
+    }
+    else if(sector==='1' && employees<1000)
+    {
+        footprintI=0.2 *Math.pow(10,6);
+    }
+
+    if(sector==='2' && employees>70000)
+    {
+      footprintI=2.5*Math.pow(10,6);
+    }
+    else if(sector==='2'&& employees>=1000 && employees<=70000)
+    {
+        footprintI=0.6*Math.pow(10,6);
+    }
+    else if(sector==='2' && employees<1000)
+    {
+        footprintI=0.040*Math.pow(10,6);;
+    }
+
+    if(sector==='3' && employees>100000)
+    {
+      footprintI=35*Math.pow(10,6);
+    }
+    else if(sector==='3'&& employees>=1000 && employees<=100000)
+    {
+        footprintI= 3*Math.pow(10,6);
+    }
+    else if(sector==='3' && employees<1000)
+    {
+        footprintI=0.25*Math.pow(10,6);
+    }
+    
+    if(sector==='4' && employees>65000)
+    {
+      footprintI=4*Math.pow(10,6);
+    }
+    else if(sector==='4'&& employees>=1000 && employees<=65000)
+    {
+        footprintI= 5*Math.pow(10,6);
+    }
+    else if(sector==='4' && employees<1000)
+    {
+        footprintI=1*Math.pow(10,6);
+    }
+   
+    if(sector==='5' && employees>90000)
+    {
+      footprintI=3.5*Math.pow(10,6);
+    }
+    else if(sector==='5'&& employees>=1000 && employees<=90000)
+    {
+        footprintI= 0.7*Math.pow(10,6);
+    }
+    else if(sector==='5' && employees<1000)
+    {
+        footprintI=0.1*Math.pow(10,6);
+    }
+    var areaI= footprintI/2.75;
+    areaI= Math.round(areaI);
+    console.log(areaI)
+
+    res.render("result-industry",{footprintI:footprintI,areaI:areaI})
+
+    
+
+});
+
+
+app.post("/create-checkout-session", async (req,res )=> {
+    
+    try{
+        
+            const session =await stripe.checkout.sessions.create({
+               payment_method_types: ["card"],
+               mode:"payment",
+               line_items:req.body.items.map(item => {
+                const storeItem =storeItems.get(item.id)
+                return{
+                    price_data:{
+                    currency: 'inr',
+                product_data:{
+                    name: storeItem.name
+                },
+                unit_amount:storeItem.price
+            },
+            quantity:item.quantity,
+            
+                    
+                 }
+               }),
+               success_url: "${process.env.SERVER_URL}/success.ejs",
+               cancel_url:"${process.env.SERVER_URL}/cancel.ejs",
+              
+        })
+        res.json({url:session.url})
+    }
+    catch (e)
+    {
+        res.status(500).json({error: e.message})
+    }
+    
+});
 
 app.get("/faq",function(req,res)
 {
@@ -366,6 +503,13 @@ app.get("/offset",function(req,res)
 {
     res.render("offset");
 });
+
+app.get("/team",function(req,res)
+{
+    res.render("team");
+});
+
+
 
 app.post("")
 

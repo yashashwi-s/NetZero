@@ -22,7 +22,7 @@
                   <h5 class="card-title">Flight Offsets </h5>
                   <p class="card-text offset-para">We will plant enough native trees to offset approximately 0.8 tCO2e. This covers emissions from a long one way economy class flight within India (e.g. Mumbai to Delhi).</p>
                   <h5>₹1500</h5>
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Pay Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button1">Pay Now</button></div>
                 </div>
               </div>
         </div>
@@ -33,7 +33,7 @@
                   <h5 class="card-title">Food & Drink Offsets</h5>
                   <p class="card-text offset-para">Approx 10 tCO2e. Calculations are based on average household size of 4.4 people and weekly spend of $273.75. Includes emissions from groceries, take-away and dining out.</p>
                   <h5>₹8000</h5>
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Pay Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button2">Pay Now</button></div>
                 </div>
               </div>
 
@@ -45,7 +45,7 @@
                   <h5 class="card-title">Home Energy Offsets</h5>
                   <p class="card-text offset-para">Approx. 8 tCO2e. Includes electricity and natural gas consumption. Calculations are based on average household size of 4.4 people with annual consumption of 6,412 kWh electricity and 4,503 kWh natural gas.</p>
                   <h5>₹10000</h5>
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Pay Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button3">Pay Now</a></div>
                 </div>
               </div>
 
@@ -59,7 +59,7 @@
                   <h5 class="card-title">Vehicle Offsets</h5>
                   <p class="card-text offset-para"> Calculating emissions reduction, such as a reduction of 2.5 tCO2e annually, based on an average distance traveled of 11,400 km per year.</p>
                   <h5>₹6000</h5>
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Pay Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button4">Pay Now</button></div>
                 </div>
               </div>
 
@@ -71,7 +71,7 @@
                   <h5 class="card-title">Total Household Footprint</h5>
                   <p class="card-text offset-para">Approx 18 tCO2e. Calculations are based on average household size of 4.44 people with annual footprint of 15 tCO2e. Footprint includes emissions from  transport, travel, waste, and food.</p>
                   <h5>₹12000</h5>
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Pay Now</a></div>
+                  <div class="d-grid gap-2"><button href="#" class="btn btn-primary button5">Pay Now</button></div>
                 </div>
               </div>
         </div>
@@ -111,7 +111,7 @@
                     </ul>
 
 
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Subscribe Now</a></div>
+                  <div class="d-grid gap-2"><button href="#" class="btn btn-primary button6">Subscribe Now</button></div>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@
                     </li>
                 </ul>
 
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Subscribe Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button7">Subscribe Now</button></div>
                 </div>
               </div>
 
@@ -165,7 +165,7 @@
                     </li>
                 </ul>
 
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Subscribe Now</a></div>
+                  <div class="d-grid gap-2"><button class="btn btn-primary button8">Subscribe Now</button></div>
                 </div>
               </div>
 
@@ -193,7 +193,7 @@
                     </li>
                 </ul>
 
-                  <div class="d-grid gap-2"><a href="#" class="btn btn-primary">Subscribe Now</a></div>
+                  <div class="d-grid gap-2"><button href="#" class="btn btn-primary button9">Subscribe Now</button></div>
                 </div>
               </div>
 
@@ -203,4 +203,241 @@
 
 
 </div>
+<script>
+   const button1 = document.querySelector(".button1")
+   const button2 = document.querySelector(".button2")
+   const button3 = document.querySelector(".button3")
+   const button4 = document.querySelector(".button4")
+   const button5 = document.querySelector(".button5")
+   const button6 = document.querySelector(".button6")
+   const button7 = document.querySelector(".button7")
+   const button8 = document.querySelector(".button8")
+   const button9 = document.querySelector(".button9")
+   
+button1.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 1, quantity: 1 },
+        ,
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button2.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+                { id: 2, quantity: 1 },
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button3.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 3, quantity: 1 },
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button4.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 4, quantity: 1 },
+       
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button5.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 5, quantity: 1 },
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button6.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 6, quantity: 1 },
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button7.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 7, quantity: 1 },
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button8.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 8, quantity: 1},
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+button9.addEventListener("click", () => {
+  fetch("http://localhost:3000/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 9, quantity: 1},
+        
+      ],
+    }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(JSON.stringify(url))
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+})
+</script>
+
 <%-include("partials/footer") -%>
