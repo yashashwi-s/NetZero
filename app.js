@@ -9,6 +9,7 @@ const passport = require('passport');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
+const router = express.Router();
 
 var t = 0;
 
@@ -215,8 +216,49 @@ app.get("/sendEmail",function(req,res)
 
 app.get("/faq",function(req,res)
 {
-    res.render("faq");
+    const faqItems = [
+        {
+            question: "How does your service work?",
+            answer: "We calculate your carbon footprint based on your lifestyle or business operations. Then, we offer personalized offset plans that involve tree planting through reputable organizations and facilitating renewable energy connections."
+        },
+        {
+            question: "What are the different subscription plans?",
+            answer: "We offer various subscription plans tailored to different carbon footprints and budgets. You can choose a plan that best suits your needs."
+        },
+        {
+            question: "How do you calculate my carbon footprint?",
+            answer: "We use a comprehensive methodology that considers factors like transportation, energy consumption, and waste generation. You can also use our online calculator for a quick estimate."
+        },
+        {
+            question: "What types of trees do you plant?",
+            answer: "We partner with reputable organizations like Green Yatra that plant native species suitable for the local environment and ensure long-term maintenance."
+        },
+        {
+            question: "How can I be sure the trees survive?",
+            answer: "We work with organizations with proven track records in tree planting and survival rates which have already planted crores of trees across the country."
+        },
+        {
+            question: "What are the benefits of renewable energy connections?",
+            answer: "By supporting renewable energy projects, you directly contribute to reducing reliance on fossil fuels and promoting a cleaner energy grid. The best part is that it costs less as well."
+        },
+        {
+            question: "How much does it cost to offset my carbon footprint?",
+            answer: "The cost depends on your carbon footprint and the chosen subscription plan. We offer transparent pricing and information on the impact of your contribution."
+        },
+        {
+            question: "Are there any tax benefits for carbon offsetting?",
+            answer: "Tax benefits for carbon offsetting may vary depending on your location. We recommend consulting a tax professional for specific advice."
+        },
+        {
+            question: "How can I be sure your offsetting solutions are legitimate?",
+            answer: "We prioritize partnerships with reputable organizations with proven certifications and transparent project details. You can access detailed information about our partners and the impact of your contribution through our platform."
+        }
+    ];
+
+    res.render('faq', { faqItems: faqItems });
 });
+
+module.exports = router;
 
 app.get("/calculator",function(req,res)
 {

@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+
+<div class="container">
+    <h1 class="faq-heading text-center mt-5 mb-4">Frequently Asked Questions</h1>
+
+    <div id="faq" class="row">
+        <% faqItems.forEach((item, index) => { %>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="question"><%= item.question %></h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="answer"><%= item.answer %></p>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>

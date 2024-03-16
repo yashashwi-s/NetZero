@@ -713,133 +713,125 @@
     padding: 5%;
 }
 /* about */
-.header-about{
-    margin: 0%;
-    padding: 3% 10%;
-    background-image: url("/images/aboutbg.jpeg") ;
+/* Header section styles */
+.header-about {
+    padding: 5% 10%;
+    background-image: url("/images/whybg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.aboutheader-title-1{
-    text-shadow: 4px 4px black;
-    padding-top: 20%;
-    padding-bottom: 10%;
-    font-family: "poppins";
-    font-weight: 900;
-    font-size:100px;
-    padding-left: 9.5%;
-    padding-right: 10%;
-    line-height: 72px;
-    text-align: left;
-    letter-spacing: 1px;
-}
-.aboutheader-tile-2{
-    text-align: left;
-    text-shadow: 3px 3px black;
-    padding-top: 0%;
-    padding-bottom: 45%;
-    font-family: "roboto";
+
+.aboutheader-title {
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size:50px;
-    padding-left: 8%;
-    padding-right: 10%;
-    line-height: 65px;
-    letter-spacing: 0.5px;
+    font-size: 3rem;
+    line-height: 1.5;
 }
-.aboutheader-para{
-    padding-top:25%;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 25px;
-    font-family: "roboto";
-    text-shadow: 2px 2px black;
-    line-height: 45px;
-    letter-spacing: 3px;
+
+.aboutheader-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.4;
 }
-.aboutus-heading{
-    padding-top: 5%;
-    font-weight: 800;
-    font-size: 75px;
-    letter-spacing: 1px;
- }
- .aboutuscard1{
-    width: 100%;
-    height: 10vw;
+
+.aboutheader-para {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+/* Section title styles */
+.section-title {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* About card styles */
+.about-card {
+    margin-top: 2rem;
+}
+
+.about-card .card-img-top {
+    border-radius: 0.5rem;
+    height: 15rem;
     object-fit: cover;
- }
- .aboutuscard2{
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
- }
- .aboutuscard3{
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
- }
+}
+
+.about-card .card-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.about-card .card-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
 /* why */
-.header-why{
-    margin: 0%;
-    padding: 3% 10%;
-    background-image: url("/images/whybg.jpg") ;
+/* Header section styles */
+.header-why {
+    padding: 5% 10%;
+    background-image: url("/images/farm.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.whyheader-title-1{
-    text-shadow: 4px 4px black;
-    padding-top: 20%;
-    padding-bottom: 10%;
-    font-family: "poppins";
-    font-weight: 900;
-    font-size:75px;
-    padding-left: 10%;
-    padding-right: 10%;
-    line-height: 72px;
-    text-align: left;
-}
-.whyheader-title-2{
-    text-align: left;
-    text-shadow: 3px 3px black;
-    padding-top: 0%;
-    padding-bottom: 45%;
-    font-family: "roboto";
+
+.whyheader-title-1 {
+    font-family: "Playfair Display", sans-serif; /* Use a clean sans-serif font for the main title */
     font-weight: 700;
-    font-size:50px;
-    padding-left: 10%;
-    padding-right: 10%;
-    line-height: 65px;
+    font-size: 3.6rem; /* Adjust the font size as needed */
+    line-height: 1.8;
 }
-.whyheader-para{
-    padding-top:25%;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 25px;
-    font-family: "roboto";
-    text-shadow: 2px 2px black;
-    line-height: 45px;
-    letter-spacing: 3px;
+
+.whyheader-title-2 {
+    font-family: "Poppins", sans-serif; /* Use the same font for subheading */
+    font-weight: 600;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    line-height: 1.4;
 }
-.offset-heading{
-    padding-top: 5%;
-    font-weight: 800;
-    font-size: 75px;
+
+.whyheader-para {
+    padding-top: 2rem;
+    font-size: 1.6rem; /* Adjust the font size as needed */
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+/* Offset section styles */
+.offset-heading {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem; /* Adjust the font size as needed */
     letter-spacing: 1px;
 }
-.whycard1{
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
+
+.card {
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
-.whycard2{
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
+
+.card-img-top {
+    border-radius: 0.5rem; /* Rounded corners */
 }
-.whycard3{
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
+
+.card-title {
+    font-size: 1.8rem; /* Adjust the font size as needed */
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
+
+.card-text {
+    font-size: 1.4rem; /* Adjust the font size as needed */
+    line-height: 1.5;
+}
+
 /* suggestion */
 .suggestions-image{
     width:40%;
@@ -858,4 +850,48 @@
     padding-top: 3%;
     
 }
+/* faq */
+/* Add this CSS to your existing styles.css or create a new CSS file and link it to your page */
+
+/* Style for the FAQ heading */
+.faq-heading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+/* Style for the question */
+.card-header {
+    background-color: #f8f9fa; /* Light gray background */
+    border-bottom: 1px solid #dee2e6; /* Gray border */
+    padding: 15px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style for the answer */
+.card-body {
+    padding: 15px;
+}
+
+.answer {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Style for the cards */
+.card {
+    border: 1px solid #dee2e6; /* Gray border */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
 
