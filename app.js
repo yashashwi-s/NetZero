@@ -1,41 +1,51 @@
-const express=require("express");
-const bodyParser=require("body-parser");
-const ejs=require("ejs");
-const app=express();
-const bcrypt=require("bcrypt");
-const _=require("lodash");
+const express = require("express");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const app = express();
+const bcrypt = require("bcrypt");
+const _ = require("lodash");
 const path = require('path');
-
-
-var t=0;
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine','ejs');
-app.get("/",function(req,res)
-{
-    res.render("home");
-});
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("Public"));
-
 const passport = require('passport');
-const session = require('cookie-session');
-const router = express.Router();
-
-app.use(session({
-    secret: 'hellfire', // Change this to a secure random string
-    resave: false,
-    saveUninitialized: true
-  }));
-
-
+const session = require('express-session');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo');
+
+var t = 0;
 
 mongoose.connect('mongodb+srv://Yashashwi:yashashwi@cluster0.qo8vdvd.mongodb.net/profileDB');
 
 const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.get("/", function(req, res) {
+    res.render("home");
+});
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("Public"));
+app.set('trust proxy', 1);
+
+app.use(session({
+    secret: 'foo',
+    resave: false, // Add this line to explicitly set resave to false
+    saveUninitialized: true, // Add this line to explicitly set saveUninitialized to true
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://Yashashwi:yashashwi@cluster0.qo8vdvd.mongodb.net/profileDB' }) // Use MongoDB as session store
+}));
+
+app.use(function(req, res, next) {
+    if (!req.session) {
+        return next(new Error('Oh no')) // Handle error
+    }
+    next(); // Otherwise continue
+});
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
- console.log("Connected to MongoDB!");
+    console.log("Connected to MongoDB!");
 });
 
 module.exports = db;
