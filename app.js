@@ -1,29 +1,41 @@
-const express=require("express");
-const bodyParser=require("body-parser");
-const ejs=require("ejs");
-const app=express();
-const bcrypt=require("bcrypt");
-const _=require("lodash");
+const express = require("express");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const app = express();
+const bcrypt = require("bcrypt");
+const _ = require("lodash");
+const mongoose = require("mongoose");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session); // This is required for using MongoDB as the session store
 
-var t=0;
-
-app.set('view engine','ejs');
-app.get("/",function(req,res)
-{
-    res.render("home");
+// Connect to MongoDB Atlas cluster
+mongoose.connect('mongodb+srv://Yashashwi:yashashwi@cluster0.qo8vdvd.mongodb.net/profileDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log("Connected to MongoDB Atlas");
+})
+.catch((err) => {
+  console.error("Error connecting to MongoDB Atlas:", err);
 });
-app.use(bodyParser.urlencoded({extended:true}));
+
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("Public"));
 
-const passport = require('passport');
-const session = require('express-session');
-const router = express.Router();
-
-app.use(session({
-    secret: 'hellfire', // Change this to a secure random string
+// Configure express-session to use MongoDB as the session store
+app.use(
+  session({
+    secret: "hellfire", // Change this to a secure random string
     resave: false,
-    saveUninitialized: true
-  }));
+    saveUninitialized: true,
+    store: new MongoStore({ mongooseConnection: mongoose.connection }), // Use MongoDB as the session store
+  })
+);
+
+// Define your routes and middleware below
+
 
 
 
@@ -46,9 +58,7 @@ router.get('/auth/github/callback', passport.authenticate('github', { failureRed
  res.redirect('/');
 });
 
-const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://Yashashwi:yashashwi@cluster0.qo8vdvd.mongodb.net/profileDB');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
