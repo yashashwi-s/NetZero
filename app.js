@@ -202,7 +202,7 @@ app.post("/login", async function (req, res) {
             // Redirect the user to a dashboard or another page upon successful login
             t=1;
             console.log("User authenticated successfully");
-            res.redirect("/calculator");
+            res.redirect("/");
         } else {
             // Passwords do not match
             console.log("Invalid password");
