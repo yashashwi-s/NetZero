@@ -39,7 +39,6 @@
 
 }
 
-
 /* footer */
 
 .footer
@@ -343,7 +342,7 @@
     font-size: 25px;
     color: #ffffff;
 }
-@media (width<=1200px) {
+@media (width<=1028px) {
     
     .testimonial-image{
         width: 50%;
@@ -383,9 +382,6 @@
 {
     width: 15%;
     height: 10%;
-}
-.business-cards{
-    width: 100%;
 }
 }
 /* email */
@@ -532,7 +528,6 @@
 .world-col{
     margin-top: 5%;
 }
-
 .calc-input{
     padding: 1%;
 }
@@ -546,8 +541,6 @@
 
     
 }
-
-
 #steps
 {
     background-color: rgb(255, 255, 255,0.6);
@@ -626,84 +619,66 @@
     letter-spacing: 1px;
 }
 /* vision */
-/* vision*/
-.vision-header {
-    background-color: #f8f9fa; 
-    padding:0%;
+.header-vision
+{
     margin: 0%;
+    padding: 3% 10%;
     background-image: url("/images/visionbg.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.visionheader-para
+{
+    padding-top:30%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
 
-
-.header-title-1 {
-    font-family: "Poppins";
-    font-size: 3.5rem;
-    color:#fff;
-    padding-top: 5%;
 }
-
-.visionheader-para {
-    font-family:"roboto";
-    font-size: 1.5rem;
-    color: #fff; 
-    padding-top:12%;
+#mission{
+    text-align: center;
 }
-
-#Mission {
-    background-color: #fff; 
-    padding: 50px 0; 
+.mission-heading
+{
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
 }
-
-.mission-heading {
-    font-size: 3.5rem;
-    color: darkgreen;
+.mission-subheading{
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.5px;
 }
-
-.mission-subheading {
-    font-size: 2.5rem;
-    color: silver;
-}
-
-.card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 30px; 
-}
-
-.card-img-top {
+.visioncard1{
     width: 100%;
-    height: 200px; 
+    height: 15vw;
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
+}    
+.visioncard2{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
-
-.card-body {
-    padding: 2rem;
+.visioncard3{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
-
-.card-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
+.partner-heading{
+    padding-bottom: 5%;
+    text-align: center;
+    font-weight: 75000;
+    font-size: 60px;
+    letter-spacing: 1px;
 }
-
-.card-text {
-    font-size: 1.6rem;
-    color: #666;
-}
-
-.partner-heading {
-    font-size: 3rem;
-    color: rgb(145, 211, 211);
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+.visionpartner2{
+    width: 45%;
+    margin-bottom: 15%;
+    padding-left: 25%;
 }
 /* offset */
 .offset-head
@@ -737,11 +712,6 @@
 .offset-row
 {
     padding: 5%;
-}
-.offset-card{
-    margin:auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
 }
 /* about */
 .header-about{
