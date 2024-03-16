@@ -24,7 +24,7 @@ app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 // Set 'views' directory for any views 
 // being rendered res.render()
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'Views'));
 app.use('/form', express.static(__dirname + '/index.html'));
 
 app.get("/", function(req, res) {
