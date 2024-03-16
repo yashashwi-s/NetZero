@@ -18,8 +18,14 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+// Set view engine as EJS
+app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
+// Set 'views' directory for any views 
+// being rendered res.render()
+app.set('views', path.join(__dirname, ''));
+app.use('/form', express.static(__dirname + '/index.html'));
 
 app.get("/", function(req, res) {
     res.render("home");
