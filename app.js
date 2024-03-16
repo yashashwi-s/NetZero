@@ -124,6 +124,10 @@ app.post("/",function(req,res){
     res.render("home");
 })
 
+app.get("/industries",function(req,res)
+{
+    res.render("industries");
+})
 
 
 app.post("/signup", async function (req, res) {
