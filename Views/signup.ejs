@@ -1,0 +1,48 @@
+<%- include("partials/header") -%>
+<div class="imagebg">
+  <center>
+    <h1 class="sign-up-heading">Sign Up</h1>
+    <a href="/auth/google"><i class="fa-brands fa-google fa-4x sign-icon" style="color: white;"></i></a>
+    <a href="/auth/github"><i class="fa-brands fa-github fa-4x sign-icon" style="color: white;"></i></a>
+    <a href="/auth/facebook"><i class="fa-brands fa-facebook fa-4x sign-icon" style="color: white;"></i></a>
+  </center>
+  <div class="signup">
+    <form class="sign-up-input  sign-up" action="/signup" method="post">
+      <div class="mb-3 ">
+        <label for="name" class="form-label sign-up-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="mobno" class="form-label sign-up-label">Mobile No.</label>
+        <input type="tel" class="form-control" id="mobno" name="mobno" pattern="[0-9]{10}" required>
+      </div>
+      <div class="mb-3">
+        <label for="username" class="form-label sign-up-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label sign-up-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label sign-up-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label sign-up-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="termscheck" required>
+        <label class="form-check-label" for="termscheck">I agree to the terms and conditions</label>
+      </div>
+      <div class="d-grid gap-2" style="padding-bottom: 2%;">
+        <button type="submit" class="btn btn-success">Sign Up</button>
+      </div>
+      <div class="d-grid gap-2" style="text-align: center; ">
+        <p>Already have an Account ? <a href="/login" >Log In</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include("partials/footer") -%>

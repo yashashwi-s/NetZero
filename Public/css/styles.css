@@ -366,6 +366,14 @@
     letter-spacing: 3px;
 
 }
+.contact-text{
+    float: none;
+}
+.image-contact
+{
+    width: 15%;
+    height: 10%;
+}
 }
 /* email */
 #email
@@ -415,8 +423,430 @@
     color:  #0A66C2;
 }
 .fa-linkedin:hover{
-    color: blue;
+    color: rgb(47, 47, 137);
 }
 .left{
     padding-right: 9%;
 }
+/* signup */
+.imagebg{
+    background-image: url("/images/bg-6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    padding-bottom: 15%;
+}
+.signup{
+    width:30%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 4%;
+}
+.sign-up-input{
+    margin:0% 3%;
+    padding-bottom: 3%;
+}
+.sign-up-heading{
+    font-family: "poppins";
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-size: 65px;
+    padding-bottom: 2%;
+
+}
+.sign-up-label{
+    font-weight: 600;
+}
+.sign-icon
+{
+    padding: 2%;
+    padding-bottom: 5%;
+}
+.sign-up{
+    padding: 7%;
+
+}
+.form-label
+{
+    font-family: "roboto";
+    font-size: 20px;
+    font-weight: 400;
+}
+/* calculator */
+#steps{
+    width:50%;
+    margin:auto;
+    padding-top: 7%;
+    padding-bottom:10% ;
+    
+
+}
+#step4{
+    text-align: left;
+}
+.submit-button{
+    margin-top: 3%;
+}
+/* results */
+.chart{
+    width:70%
+    
+    
+}
+.india{
+    
+    width:40%;
+}
+.india-text{
+    float:right;
+}
+.india-col{
+    margin-top:5%
+}
+.results{
+    margin:5%;
+}
+.globe{
+    width:40%;
+
+}
+.world-text{
+    float:right;
+}
+.world-col{
+    margin-top: 5%;
+}
+.calc-input{
+    padding: 1%;
+}
+.calc-bg
+{
+    background-image: url("/images/bg-5.jpg");
+    background-size: cover;
+    width:100%;
+    padding-top:5% ;
+    padding-bottom: 5%;
+
+    
+}
+#steps
+{
+    background-color: rgb(255, 255, 255,0.6);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 2%;
+
+}
+/* results */
+.result-bg
+{
+    background-image: url(/images/bg-7.jpg);
+    color: #fff;
+}
+.result-bg-1
+{
+    background-color: rgb(0, 0, 0,0.6);
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+}
+.result-bg-2
+{
+    background-color: rgb(0, 0, 0,0.6);
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 7%;
+
+}
+.result-title
+{
+    font-family: "poppins";
+    font-weight: 600;
+    text-align: left;
+    font-size: 50px;
+    padding-bottom: 5%;
+}
+.result-sh
+{
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 25px;
+
+}
+.result-tit{
+    font-family: "roboto";
+    text-align: center;
+    font-size: 30px;
+
+}
+.result-par
+{
+    font-family: "roboto";
+    font-weight: 300;
+}
+.compare
+{
+    margin: 5%;
+}
+.india-para
+{
+    margin: 5%;
+    font-family: "roboto";
+    letter-spacing: 1px;
+  
+}
+.world-para
+{
+    margin: 5%;
+    font-family: "roboto";
+    letter-spacing: 1px;
+}
+/* vision */
+.header-vision
+{
+    margin: 0%;
+    padding: 3% 10%;
+    background-image: url("/images/visionbg.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visionheader-para
+{
+    padding-top:30%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+
+}
+#mission{
+    text-align: center;
+}
+.mission-heading
+{
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
+}
+.mission-subheading{
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.5px;
+}
+.visioncard1{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}    
+.visioncard2{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.visioncard3{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.partner-heading{
+    padding-bottom: 5%;
+    text-align: center;
+    font-weight: 75000;
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+.visionpartner2{
+    width: 45%;
+    margin-bottom: 15%;
+    padding-left: 25%;
+}
+/* offset */
+.offset-head
+{
+    text-align: center;
+    background-color: rgb(87, 140, 130);
+    padding: 5%;
+}
+.offset-heading
+{
+    color: #ffffff;
+    font-family: "poppins";
+    font-weight: 800;
+    font-size: 65px;
+}
+.offset-sub-heading
+{
+    color: #ffffff;
+    font-family: "roboto";
+    font-size: 25px;
+    font-weight: 300;
+}
+.offset-para
+{
+    padding: 5%;
+    font-family: "roboto";
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.offset-row
+{
+    padding: 5%;
+}
+/* about */
+.header-about{
+    margin: 0%;
+    padding: 3% 10%;
+    background-image: url("/images/aboutbg.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutheader-title-1{
+    text-shadow: 4px 4px black;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-family: "poppins";
+    font-weight: 900;
+    font-size:100px;
+    padding-left: 9.5%;
+    padding-right: 10%;
+    line-height: 72px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.aboutheader-tile-2{
+    text-align: left;
+    text-shadow: 3px 3px black;
+    padding-top: 0%;
+    padding-bottom: 45%;
+    font-family: "roboto";
+    font-weight: 700;
+    font-size:50px;
+    padding-left: 8%;
+    padding-right: 10%;
+    line-height: 65px;
+    letter-spacing: 0.5px;
+}
+.aboutheader-para{
+    padding-top:25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+.aboutus-heading{
+    padding-top: 5%;
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
+ }
+ .aboutuscard1{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+ .aboutuscard2{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+ .aboutuscard3{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+ }
+/* why */
+.header-why{
+    margin: 0%;
+    padding: 3% 10%;
+    background-image: url("/images/whybg.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.whyheader-title-1{
+    text-shadow: 4px 4px black;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-family: "poppins";
+    font-weight: 900;
+    font-size:75px;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 72px;
+    text-align: left;
+}
+.whyheader-title-2{
+    text-align: left;
+    text-shadow: 3px 3px black;
+    padding-top: 0%;
+    padding-bottom: 45%;
+    font-family: "roboto";
+    font-weight: 700;
+    font-size:50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 65px;
+}
+.whyheader-para{
+    padding-top:25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-family: "roboto";
+    text-shadow: 2px 2px black;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+.offset-heading{
+    padding-top: 5%;
+    font-weight: 800;
+    font-size: 75px;
+    letter-spacing: 1px;
+}
+.whycard1{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+.whycard2{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+.whycard3{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+/* suggestion */
+.suggestions-image{
+    width:40%;
+    margin:5% 0%;
+}
+.suggestions-col{
+    text-align: center;
+    padding: 5%;
+    font-family: "roboto";
+}
+.suggest{
+    background-color: rgb(231,228,225);
+}
+.bottom-results{
+    background-color: rgb(231,228,225);
+    padding-top: 3%;
+    
+}
+
