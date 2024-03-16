@@ -4,9 +4,11 @@ const ejs=require("ejs");
 const app=express();
 const bcrypt=require("bcrypt");
 const _=require("lodash");
+const path = require('path');
+
 
 var t=0;
-
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','ejs');
 app.get("/",function(req,res)
 {
@@ -25,26 +27,6 @@ app.use(session({
     saveUninitialized: true
   }));
 
-
-
-
-router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
-router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function(req, res) {
- // Successful authentication, redirect home.
- res.redirect('/');
-});
-
-router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['profile'] }));
-router.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
- // Successful authentication, redirect home.
- res.redirect('/');
-});
-
-router.get('/auth/github', passport.authenticate('github', { scope: ['profile'] }));
-router.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), function(req, res) {
- // Successful authentication, redirect home.
- res.redirect('/');
-});
 
 const mongoose = require('mongoose');
 
