@@ -12,7 +12,7 @@ NetZero is a project aimed at carbon offsetting for individuals as well as busin
    First, you need to clone the repository to your local machine. Open your terminal or command prompt and run the following command:
 
 ######
-        git clone https://github.com/yashashwi-s/NetZero.git
+    git clone https://github.com/yashashwi-s/NetZero.git
 
 2. **Navigate to the Repository Folder:**  
 Change your directory to the cloned repository:
